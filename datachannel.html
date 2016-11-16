@@ -1,0 +1,44 @@
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="description" content="LD 2016">
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta id="theme-color" name="theme-color" content="#ffffff">
+
+  <base target="_blank">
+
+  <title>LD 2016 goes WebRTC!</title>
+
+  <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+
+  <div id="container">
+    <h1><a href="" title="WebRTC">WebRTC</a> <span>DataChannel Chat</span></h1>
+
+    <div>
+      <button id="call">Create Offer (Call)</button>
+      <button id="hangup">Hang Up</button>
+    </div>
+
+    <span>Channel</span>
+    <input type="text" id="message"/><button id="send">Send</button>
+    <div id="chat"></div>
+    
+    <div id="errorMsg"></div>
+    <div id="okMsg"></div>
+    <div>
+	<textarea id='sdpMessage' name="sdpMessage" type="textarea" value="" cols="80" rows="10"></textarea>
+	<button id="setSdpOffer">Set as Sdp Offer (callee)</button>
+	<button id="setSdpAnswer">Set as Sdp Answer (initiator)</button>
+	<button id="clear">Clear</button>
+  </div>
+
+  <script src="js/main_dc.js"></script>
+</body>
+</html>
