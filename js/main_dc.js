@@ -29,7 +29,7 @@ initPeerConnection();
 function initPeerConnection() {
    var servers = {'iceServers': [{'urls': 'stun:stun.l.google.com:19302'},
    				 {"urls":["turn:74.125.143.127:19305?transport=udp","turn:[2A00:1450:4013:C03::7F]:19305?transport=udp","turn:74.125.143.127:443?transport=tcp","turn:[2A00:1450:4013:C03::7F]:443?transport=tcp"],"username":"COCYrsAFEgZfe2dPu/0Yzc/s6OMT","credential":"C/B5w7Oauq7czKcFMgatxB8pTyQ="}]};
-   var  pcConstraints = {'mandatory':
+   var  pcConstraint = {'mandatory':
   {
     'OfferToReceiveAudio': false,
     'OfferToReceiveVideo': false
