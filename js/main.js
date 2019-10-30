@@ -33,8 +33,8 @@ function initPeerConnection() {
 	  localStream = stream;
 	  console.log('getUserMedia success! Stream: ', stream);
 	  console.log('LocalStream', localStream.getVideoTracks());
-	  var source = window.webkitURL.createObjectURL(stream);	
-	  localVideo.src = source;
+
+	  localVideo.srcObject = localStream;
   	  msgdiv.innerHTML = '<p> L\'utente ha dato il permesso di utilizzare mic e webcam!</p>';
           var videoTracks = localStream.getVideoTracks();
           var audioTracks = localStream.getAudioTracks();
@@ -132,8 +132,9 @@ function setSdpAnswer() {
 
 function gotRemoteStream(e) {
   console.log("Got remote stream!", e);
-  var source = window.webkitURL.createObjectURL(e.stream);	
-  remoteVideo.src = source;
+//  var source = window.webkitURL.createObjectURL(e.stream);	
+  
+	remoteVideo.srcObject = e.stream;
 
 }
 

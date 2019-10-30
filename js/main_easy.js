@@ -4,8 +4,7 @@ onSuccess = function (stream) {
 
 	var output = document.getElementById('gum-local');
 
-	var source = window.webkitURL.createObjectURL(stream);	
-	output.src = source;
+	output.srcObject = stream;
 	var msgdiv = document.getElementById('okMsg');
 	msgdiv.innerHTML = '<p>The user allowed using microphone and webcam</p>';
 };
