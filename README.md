@@ -6,7 +6,7 @@ npm install connect serve-static
 Run server
 ----------
 ```sh
-./server.js
+node ./server.js
 ```
 Start the call
 --------------
